@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<CHRIST>
+	<CS>
+		<STU-NAME>Ramu</STU-NAME>
+		<STU-BRANCH>Computers</STU-BRANCH>
+		<STU-COLLEGE>St. Joseph's Bangalore</STU-COLLEGE>
+		<STU-EMAIL>12345ramu@gmail.com</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>Paul</STU-NAME>
+		<STU-BRANCH>Sciences</STU-BRANCH>
+		<STU-COLLEGE>Mount Carmel Bangalore</STU-COLLEGE>
+		<STU-EMAIL>12345paul@gmail.com</STU-EMAIL>
+	</CS>
+    <CS>
+		<STU-NAME>Gopal</STU-NAME>
+		<STU-BRANCH>Arts</STU-BRANCH>
+		<STU-COLLEGE>BMSCE College</STU-COLLEGE>
+		<STU-EMAIL>12345gopal@gmail.com</STU-EMAIL>
+	</CS>
+
+</CHRIST>
