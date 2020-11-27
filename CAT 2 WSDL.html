@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-in" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.auto-style2 {
+	text-align: center;
+	font-size: xx-large;
+	font-family: "Copperplate Gothic Bold";
+}
+.auto-style3 {
+	text-align: center;
+	font-size: 48pt;
+	font-family: "Copperplate Gothic Bold";
+	color: #00887A;
+}
+.auto-style4 {
+	font-size: x-large;
+}
+.auto-style5 {
+	color: #00887A;
+}
+.auto-style6 {
+	font-size: x-large;
+	margin-left: 3px;
+	text-align: center;
+}
+.auto-style7 {
+	text-align: center;
+}
+</style>
+<script type='text/javascript'>
+function formValidation()
+{
+var uid = document.form1.userid;
+var passid = document.form1.passid;
+var uname = document.form1.username;
+var uadd = document.form1.address;
+var ustate = document.form1.state;
+var uphno = document.form1.phno;
+var uemail = document.form1.email;
+var uage = document.form1.age;
+
+	if(userid_validation(uid,5,12))
+          {
+             if(userid_validation(passid,7,12))
+               {
+ 	        if(allLetter(uname))
+                  {
+                      if(stateselect(ustate))
+                {
+                  if(uphno_validation(uphno,10))
+                    {
+                      if(ValidateEmail(uemail))
+                         {
+      window.location="form-valid.html";
+}
+}
+
+}
+ }	
+   }      
+         }
+return false;
+}
+
+function userid_validation(uphno,mx)
+{
+var uphno_len = uphno.value.length;
+if (uid_len == 0 || uid_len > mx || uid_len < mx)
+{
+alert("It should not be empty / length be 10");
+uphno.focus();
+return false;
+}
+return true;
+}
+
+
+
+function userid_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= my || uid_len < mx)
+{
+alert("It should not be empty / length be between "+mx+" to "+my);
+uid.focus();
+return false;
+}
+return true;
+}
+
+
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Please input alphabet characters only');
+uname.focus();
+return false;
+}
+}
+
+
+function alphanumeric(uadd)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Please input alphanumeric characters only');
+uadd.focus();
+return false;
+}
+}
+
+
+function stateselect(ustate)
+       {
+	if(ustate.value == "PS")
+                 {
+		alert('Select your country from the list');
+		ustate.focus();
+		return false;
+	}
+        else
+        {
+		return true;
+	}
+}
+
+
+function allnumeric(uphno)
+ { 
+      var numbers = /^[0-9]+$/;
+       if(phmo.value.match(numbers))
+          {
+            return true;
+           }
+       else
+            {
+             alert('Please input numeric characters only');
+             phno.focus();
+             return false;
+             }
+   }
+
+
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false;
+}
+}
+
+
+
+ function Setcookie()
+        {
+                           document.cookie="uid="+document.getElementById("uid").value+";expires=Thu, 10 Dec 2022 23:50:00 UTC";;
+                document.cookie="passid="+document.getElementById("passid").value;
+                window.location.href("CAT 2 WSDL.html");
+                alert("Registration Successfull");
+            } 
+            
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var Allcookies,Temp;
+                Allcookies=document.cookie.split(";");   
+                for(var i=0;i<Allcookies.length;i++)
+                {
+                    Temp=Allcookies[i].split("=");
+                    if(Temp[0]=="userid")
+                    {
+                        document.getElementById("userid").value=Temp[1];
+                    }
+                    if(Temp[0]==" passid")
+                    {
+                        document.getElementById("passid").value=Temp[1];
+                    }
+                }
+            }
+        }
+
+
+</script>
+
+</head>
+
+<body style="height: 1088px; background-color: #CCFFFF">
+
+<p class="auto-style3" style="height: 47px"><strong>“TECHOVID”</strong></p>
+<p class="auto-style2" style="height: 13px">The online national-level IT fest
+<span class="auto-style5">Gateways 2020</span>,</p>
+<p class="auto-style2" style="height: 14px"><span class="auto-style4">Presented by</span> </p>
+<p class="auto-style2" style="height: 14px">The Post Graduate students of Department of Computer 
+Science,</p>
+<p class="auto-style2" style="height: 29px">&nbsp;CHRIST (Deemed to be University)</p>
+<br><br>
+
+<p style="width: 1413px" class="auto-style7"><marquee direction="left">Registration closes 30/11/2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Registration closes 30/11/2020</marquee></p>
+<p>&nbsp;</p>
+<h1 class="auto-style6">Register Now</h1>
+
+
+<form name='form1' onsubmit='return formValidation()' >
+<table cellpadding="3" style="border-collapse: collapse; width: 629px;" align="center">
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>User Name</strong></td>
+	<td>
+	<input type="text" name="userid" size="12" style="width: 205px; height: 39px"  /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>Password</strong></td>
+	<td>
+	<input type="password" name="passid" size="12" style="width: 201px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>First Name</strong></td>
+	<td>
+	<input type="text" name="username" size="50" style="height: 39px; width: 308px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>Address</strong></td>
+	<td>
+	<input type="text" name="address" size="50" style="width: 308px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>State</strong></td>
+    <td><select id="state" name="state">
+       <option selected="" value="PS">(Please select a State)</option>
+     <option value="--">none</option>
+    <option value="KA">Karnataka</option>
+     <option value="AM">Assam</option>
+       <option value="GA">Goa</option>
+        <option value="KL">Kerala</option>
+       <option value="TN">Tamil Nadu</option>
+     <option value="MH">Maharashtra</option>
+         <option value="DL">Delhi</option>
+      <option value="SK">Sikkim</option>
+          <option value="MN">Manipur</option>
+            </select></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>Branch </strong> </td>
+	<td><input type="text" name="branch" style="width: 139px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>Email</strong></td>
+	<td>
+	<input type="text" name="email" size="50" style="width: 311px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="height: 39px; width: 191px"><strong>Age</strong></td>
+	<td style="height: 39px">
+	<input type="text" name="age" style="width: 139px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>Phone number</strong></td>
+    <td><input type="text" name="phno" style="width: 169px; height: 39px" /></td>
+  </tr>
+  <tr>
+    <td class="auto-style7" style="width: 191px"><strong>
+	<span class="auto-style7">College/University name</span></strong></td>
+    <td><textarea name="coluni" rows="4" cols="40" class="auto-style8"></textarea></td>
+  </tr>
+  <tr>
+     <td style="width: 191px">&nbsp;</td>
+    <td>
+	<strong>
+	<input type="submit" name="submit" value="Submit" onclick="Setcookie()" style="width: 134px; height: 41px" class="auto-style5" /></strong><span class="auto-style2"><strong><input type="reset" name="submit0" value="Reset" style="width: 134px; height: 41px" class="auto-style5" /></strong></span></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</form>
+
+</body>
+
+</html>
