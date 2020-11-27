@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<style>
+    table,th,td
+    {
+     border:3px solid yellow;
+    }
+    th,td{
+        padding: 6px;
+    }
+.auto-style1 {
+	text-align: center;
+	margin-top: 52px;
+}
+.auto-style3 {
+	text-align: center;
+	font-size: 48pt;
+	font-family: "Copperplate Gothic Bold";
+	color: #00887A;
+}
+.auto-style2 {
+	text-align: center;
+	font-size: xx-large;
+	font-family: "Copperplate Gothic Bold";
+}
+.auto-style5 {
+	color: #00887A;
+}
+.auto-style4 {
+	font-size: x-large;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="height: 571px; position: inherit;">
+
+<p class="auto-style3" style="height: 47px"><strong>“TECHOVID”</strong></p>
+<p class="auto-style2" style="height: 13px">The online national-level IT fest
+<span class="auto-style5">Gateways 2020</span>,</p>
+<p class="auto-style2" style="height: 14px"><span class="auto-style4">Presented by</span> </p>
+<p class="auto-style2" style="height: 14px">The Post Graduate students of Department of Computer 
+Science,</p>
+<p class="auto-style2" style="height: 29px">&nbsp;CHRIST (Deemed to be University)</p>
+    <h1 class="auto-style1" style="height: 93px">
+	<span lang="en-in"><span class="auto-style5">List Of Students</span></span></h1>
+    <button type="button" onclick="loadXML()">SHOW LIST</button>
+    <br><br>
+    <table id="demo" align="center"></table>
+    <script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","XML WSDL.xml",true);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>NAME</th><th>COLLEGE</th></tr>";
+            var x=xmlDoc.getElementsByTagName("hotel");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
+</body>
+</html>
