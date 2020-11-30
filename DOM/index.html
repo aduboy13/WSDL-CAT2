@@ -2,7 +2,7 @@
 <style>
     table,th,td
     {
-     border:3px solid yellow;
+     border:3px solid green;
     }
     th,td{
         padding: 6px;
@@ -68,7 +68,7 @@ Science,</p>
             var i;
             var xmlDoc=xml.responseXML;
             var t="<tr><th>NAME</th><th>COLLEGE</th></tr>";
-            var x=xmlDoc.getElementsByTagName("hotel");
+            var x=xmlDoc.getElementsByTagName("CS");
             for(i=0;i<x.length;i++)
             {
                 t +="<tr><td>" +
